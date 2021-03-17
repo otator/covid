@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid Tracker</title>
+</head>
+<body>
+  <a href="/">home</a>
+  <a href="/allCountries">All Countries</a>
+  <a href="/myRecords">my records</a>
+  <h2>World Total Statistics</h2>
+  <h3>Total Confirmed <%= data.TotalConfirmed%> </h3>
+  <h3>Total Death <%= data.TotalDeaths%></h3>
+  <h3>Total Recoveres <%= data.TotalRecovered%></h3>
+
+  <h2>get stats for a specific country</h2>
+  <form action="/getCountryResult" method="get">
+    <input type="text" name="countryName">
+    <input type="date" name="firstDate">
+    <input type="date" name="lastDate">
+    <button>Search</button>
+  </form>
+</body>
+</html>
